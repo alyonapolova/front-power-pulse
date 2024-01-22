@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/front-power-pulse/static/css/main.7acaea2f.css",
-    "main.js": "/front-power-pulse/static/js/main.5832ffd9.js",
+    "main.js": "/front-power-pulse/static/js/main.370d21c0.js",
     "index.html": "/front-power-pulse/index.html",
     "main.7acaea2f.css.map": "/front-power-pulse/static/css/main.7acaea2f.css.map",
-    "main.5832ffd9.js.map": "/front-power-pulse/static/js/main.5832ffd9.js.map"
+    "main.370d21c0.js.map": "/front-power-pulse/static/js/main.370d21c0.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.5832ffd9.js"
+    "static/js/main.370d21c0.js"
   ]
 }
