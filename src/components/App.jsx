@@ -1,16 +1,23 @@
+import Register from 'pages/register';
+import { Link, Route, Routes } from 'react-router-dom';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
-      React homework template
+    <div>
+      <nav>
+        <Link to="/" end>
+          Home
+        </Link>
+        <Link to="/register">Sign Up</Link>
+        <Link to="/login">Login</Link>
+      </nav>
+
+      <Routes>
+        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/register" element={<Register />} />
+        {/* <Route path="/login" element={<Login />} /> */}
+        {/* <Route path="*" element={<NotFound />} /> */}
+      </Routes>
     </div>
   );
 };
