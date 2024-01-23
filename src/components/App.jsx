@@ -1,7 +1,7 @@
-import Home from 'pages/home';
-import Layout from 'pages/layout';
-import Login from 'pages/login';
-import Register from 'pages/register';
+import HomePage from 'pages/HomePage';
+import Layout from 'pages/Layout';
+import LoginPage from 'pages/LoginPage';
+import RegisterPage from 'pages/RegisterPage';
 import { Route, Routes } from 'react-router-dom';
 
 export const App = () => {
@@ -9,9 +9,9 @@ export const App = () => {
     <div>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
+          <Route index element={<HomePage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/login" element={<LoginPage />} />
           {/* <Route path="*" element={<NotFound />} /> */}
         </Route>
       </Routes>
