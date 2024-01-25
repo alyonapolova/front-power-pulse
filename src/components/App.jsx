@@ -1,5 +1,6 @@
 import HomePage from 'pages/HomePage';
-import Layout from 'pages/Layout';
+import Layout from '../pages/Layout';
+
 // import LoginPage from 'pages/LoginPage';
 import RegisterPage from 'pages/RegisterPage';
 // import ProfileSettings from 'pages/ProfileSettings';
