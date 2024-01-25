@@ -1,9 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
+import { loginSelect } from '../redux/auth/selectors';
 import { logout } from '../redux/auth/authSlice';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
-  const login = useSelector(state => state.auth.login);
+  const login = useSelector(loginSelect);
   return (
     <div>
       {login}

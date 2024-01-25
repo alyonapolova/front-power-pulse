@@ -1,8 +1,10 @@
 import { NavLink } from 'react-router-dom';
 import { UserMenu } from './UserMenu';
 import { useSelector } from 'react-redux';
+import { isLoggedInSelect } from '../redux/auth/selectors';
+
 export const AppBar = () => {
-  const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
+  const isLoggedIn = useSelector(isLoggedInSelect);
   return (
     <header
       style={{
@@ -19,8 +21,9 @@ export const AppBar = () => {
         }}
       >
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/register">Sign Up</NavLink>
-        <NavLink to="/login">Login</NavLink>
+        {isLoggedIn && <NavLink to="/user">User Page</NavLink>}
+        {!isLoggedIn && <NavLink to="/register">Sign Up</NavLink>}
+        {!isLoggedIn && <NavLink to="/login">Login</NavLink>}
       </nav>
       {isLoggedIn && <UserMenu />}
     </header>
