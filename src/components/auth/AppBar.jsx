@@ -1,6 +1,9 @@
+import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import { isLoggedInSelect } from '../../redux/auth/selectors';
 
 export const AppBar = () => {
+  const isLoggedIn = useSelector(isLoggedInSelect);
   return (
     <header
       style={{
@@ -16,8 +19,10 @@ export const AppBar = () => {
           gap: 10,
         }}
       >
-        <NavLink to="/register">Sign Up</NavLink>
+        {!isLoggedIn && <NavLink to="/register">Sign Up</NavLink>}
+        {!isLoggedIn && <NavLink to="/login">Sign In</NavLink>}
       </nav>
+      {isLoggedIn && <NavLink to="/logout">LogOut</NavLink>}
     </header>
   );
 };
