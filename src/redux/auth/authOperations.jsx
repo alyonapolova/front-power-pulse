@@ -38,6 +38,11 @@ export const login = createAsyncThunk('auth/login', async info => {
   }
 });
 
-// export const logout = createAsyncThunk('auth/logout', async () => {
-//   try{await axios.post() }
-// })
+export const logout = createAsyncThunk('auth/logout', async () => {
+  try {
+    await axios.post('/logout');
+    unsetToken();
+  } catch (error) {
+    console.log(error);
+  }
+});

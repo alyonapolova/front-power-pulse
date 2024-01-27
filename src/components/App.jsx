@@ -1,9 +1,9 @@
 import HomePage from 'pages/HomePage';
 import Layout from 'pages/Layout';
 import LoginPage from 'pages/LoginPage';
-
+import ProfileSettings from 'pages/ProfileSettings';
 import RegisterPage from 'pages/RegisterPage';
-// import ProfileSettings from 'pages/ProfileSettings';
+
 import { Route, Routes } from 'react-router-dom';
 
 export const App = () => {
@@ -12,7 +12,7 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
-          {/* <Route path="/user" element={<ProfileSettings />} /> */}
+          <Route path="/user" element={<ProfileSettings />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
           {/* <Route path="/diary" element={<DiaryPage />} />
