@@ -1,6 +1,7 @@
 import HomePage from 'pages/HomePage';
 import Layout from 'pages/Layout';
 import LoginPage from 'pages/LoginPage';
+import ProductsPage from 'pages/ProductsPage';
 import ProfileSettings from 'pages/ProfileSettings';
 import RegisterPage from 'pages/RegisterPage';
 
@@ -16,8 +17,8 @@ export const App = () => {
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
           {/* <Route path="/diary" element={<DiaryPage />} />
-          <Route path="/exercises" element={<ExercisesPage />} />
-          <Route path="/products" element={<ProductsPage />} /> */}
+          <Route path="/exercises" element={<ExercisesPage />} /> */}
+          <Route path="/products" element={<ProductsPage />} />
           {/* <Route path="*" element={<NotFound />} /> */}
         </Route>
       </Routes>
